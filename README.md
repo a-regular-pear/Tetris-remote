@@ -13,7 +13,7 @@ This program lets you play Tetris with a remote
 >sudo apt-get install python3
 
 #### Arch
->sudo pacman -S python3
+>sudo pacman -S python
 
 #### Windows
 https://www.python.org/
@@ -45,8 +45,8 @@ If you would like to use your own remote at home you need to find the HEX values
 
 
 ### Run the bot
-To run the bot type
->python3 discordbot.py
+To run the script type
+>python3 tetris.py
 
 
 #### Made with the usage of:
