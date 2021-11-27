@@ -20,32 +20,32 @@ void loop() {
     uint32_t results = IrReceiver.decodedIRData.decodedRawData;
 
 
-    if (results == 0x0)
+    if (results == 0x0 && (key_value == 0xF807FB04 || key_value == 0xF906FB04 || key_value == 0xBE41FB04))
           results = key_value;
     
     switch(results){
-      case 0xB946FF00:
-      Serial.println("CH"); 
+      case 0xBF40FB04:
+      Serial.println("up"); 
       break;
 
-      case 0xEA15FF00:
-      Serial.println("+"); 
+      case 0xBE41FB04:
+      Serial.println("down"); 
       break;
 
-      case 0xBB44FF00:
-      Serial.println("|<<");
+      case 0xF807FB04:
+      Serial.println("left");
       break;
 
-      case 0xBC43FF00:
-      Serial.println("|>||");
+      case 0xF906FB04:
+      Serial.println("right");
       break;     
         
-      case 0xBF40FF00:
-      Serial.println(">>|");
+      case 0xBB44FB04:
+      Serial.println("space");
       break;  
         
-      case 0xF807FF00:
-      Serial.println("-");
+      case 0xDF20FB04:
+      Serial.println("c");
       break;  
         
 
